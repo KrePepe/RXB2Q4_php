@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
     }
   }
 
-  Modifying(): void{
-    console.log("drei kurva"+this)
+  Modifying(i: number): void{
+    console.log("drei kurva"+i)
   }
 }

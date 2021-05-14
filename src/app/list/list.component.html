@@ -13,11 +13,11 @@
   </thead>
   <tbody>
   <tr *ngFor="let adat of service.adatok; index as i">
-    <td>{{adat.i}}</td>
+    <td>{{i}}</td>
     <td>{{adat.question}}</td>
     <td>{{adat.correct_answer}}</td>
     <td>{{adat.incorrect_answers}}</td>
     <td>{{adat.difficulty}}</td>
-    <td><button type="button" (click)="Modifying()">modi</button></td>
+    <td><button type="button" (click)="Modifying(i)">modi</button></td>
   </tr>
 </table>
