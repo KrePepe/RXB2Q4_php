@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
   }
 
   save(): void{
-    this.service.adatom.push(this.adat);
+    this.service.adatok.push(this.adat);
     this.adat = new MyAdat();
   }
 

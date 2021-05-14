@@ -7,12 +7,13 @@ import {MyAdat} from './adat.model';
   providedIn: "root"
 })
 export class ElsoService{
-  public adatom: MyAdat[] = [];
+  public adatok: MyAdat[] = [];
 
   constructor( private http: HttpClient ) {
   }
 
   public fetch(): Observable<any>{
-    return this.http.get( 'https://opentdb.com/api.php?amount=10&category=9')
+    return this.http.get( 'https://opentdb.com/api.php?amount=7&category=9')
   }
 }
+console.log(MyAdat)

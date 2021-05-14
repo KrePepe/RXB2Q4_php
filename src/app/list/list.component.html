@@ -1,16 +1,19 @@
 <p>list works!</p>
-<table class="table" *ngIf="service.adatom">
+<table class="table" *ngIf="service.adatok">
   <thead>
   <tr>
+    <th>n</th>
     <th>Q</th>
     <th>correct</th>
     <th>incorrect</th>
     <th>cat</th>
     <th>modif</th>
+    <th>delet</th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let adat of service.adatom">
+  <tr *ngFor="let adat of service.adatok; index as i">
+    <td>{{adat.i}}</td>
     <td>{{adat.question}}</td>
     <td>{{adat.correct_answer}}</td>
     <td>{{adat.incorrect_answers}}</td>

@@ -14,16 +14,12 @@ export class ModifyComponent implements OnInit {adat= new MyAdat();
   ) { }
 
   ngOnInit(): void {
-    this.adat = this.service.adatom[2];
+    this.adat = this.service.adatok[2];
   }
 
   save(): void{
-    this.service.adatom.push(this.adat);
+    this.service.adatok.push(this.adat);
     this.adat = new MyAdat();
-  }
-
-  Modifying(): void{
-    this.service.adatom[3] = this.service.adatom[3]
   }
 
 }

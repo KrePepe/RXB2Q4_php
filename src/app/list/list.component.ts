@@ -14,13 +14,16 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.service.adatom.length === 0){
+    if (this.service.adatok.length === 0){
       this.service.fetch().subscribe(
-        (data: any) => this.service.adatom = data.results,
+        (data: any) => this.service.adatok = data.results,
         error => console.log(error),
-        () => console.log("cplete")
+        () => console.log("jo list componentn ts 21")
       )
-}
+    }
   }
 
+  Modifying(): void{
+    console.log("drei kurva"+this)
+  }
 }
