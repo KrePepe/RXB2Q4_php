@@ -1,0 +1,20 @@
+<p>list works!</p>
+<table class="table" *ngIf="service.adatom">
+  <thead>
+  <tr>
+    <th>Q</th>
+    <th>correct</th>
+    <th>incorrect</th>
+    <th>cat</th>
+    <th>modif</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let adat of service.adatom">
+    <td>{{adat.question}}</td>
+    <td>{{adat.correct_answer}}</td>
+    <td>{{adat.incorrect_answers}}</td>
+    <td>{{adat.difficulty}}</td>
+    <td><button type="button" (click)="Modifying()">modi</button></td>
+  </tr>
+</table>

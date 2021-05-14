@@ -1,0 +1,18 @@
+<p>form works!</p>
+
+<label for="questioninp">Kérdés</label><br>
+<input type="text" id="questioninp" name="questionimp" placeholder="Ötöst kell kapnom erre?"
+       [(ngModel)]="adat.question"><br>
+<label for="correct_answer">Helyes válasz</label><br>
+<input type="text" id="correct_answer" name="correct_answer" placeholder="Egyértelműen"
+       [(ngModel)]="adat.correct_answer"><br>
+<label for="incorrect_answers">Rossz válasz</label><br>
+<input type="text" id="incorrect_answers" name="incorrect_answers" placeholder="Bocs"
+       [(ngModel)]="adat.incorrect_answers"><br>
+<label for="difficulty">Szint</label><br>
+<input type="text" id="difficulty" name="difficulty" placeholder="easy/medium/hard"
+       [(ngModel)]="adat.difficulty"><br>
+
+<br>
+<button type="button" class="btn btn-success" (click)="save()">Mentés</button>
+
