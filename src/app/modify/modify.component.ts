@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {MyAdat} from "../adat.model";
 import {ElsoService} from "../elso.service";
@@ -10,16 +11,29 @@ import {ElsoService} from "../elso.service";
 export class ModifyComponent implements OnInit {adat= new MyAdat();
 
   constructor(
-    private service: ElsoService
+    private service: ElsoService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.adat = this.service.adatok[2];
+    var x = this.route.snapshot.paramMap.get('id');
+    if (x != null) {
+      var y: number = +x;
+      this.adat = this.service.adatok[y];
+    }
+    console.log(x);
   }
 
-  save(): void{
-    this.service.adatok.push(this.adat);
-    this.adat = new MyAdat();
+  save(): void {
+    var x = this.route.snapshot.paramMap.get('id');
+    if (x != null) {
+      var y: number = +x;
+      this.adat = this.service.adatok[y];
+      this.service.adatok.splice(y,1);
+      this.service.adatok.push(this.adat);
+      this.adat = new MyAdat();
+    }
+
   }
 
 }

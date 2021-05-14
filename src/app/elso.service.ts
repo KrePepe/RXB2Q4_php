@@ -15,5 +15,9 @@ export class ElsoService{
   public fetch(): Observable<any>{
     return this.http.get( 'https://opentdb.com/api.php?amount=7&category=9')
   }
+
+  // read(id): Observable<any> {
+  //   return this.http.get(`modify/${id}`);
+  // }
 }
 console.log(MyAdat)

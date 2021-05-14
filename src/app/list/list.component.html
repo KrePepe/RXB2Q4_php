@@ -1,4 +1,4 @@
-<p>list works!</p>
+<p>kilistázom az adatok</p>
 <table class="table" *ngIf="service.adatok">
   <thead>
   <tr>
@@ -8,7 +8,7 @@
     <th>incorrect</th>
     <th>cat</th>
     <th>modif</th>
-    <th>delet</th>
+    <th>delete</th>
   </tr>
   </thead>
   <tbody>
@@ -19,5 +19,6 @@
     <td>{{adat.incorrect_answers}}</td>
     <td>{{adat.difficulty}}</td>
     <td><button type="button" (click)="Modifying(i)">modi</button></td>
+    <td><button type="button" (click)="Delete(i)">delete</button></td>
   </tr>
 </table>
